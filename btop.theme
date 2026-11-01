@@ -1,0 +1,98 @@
+# ------------------------------------------------------------------------------
+# AEGIS — DEEP SPACE COMMAND CENTER
+# btop telemetry and system monitoring console
+# ------------------------------------------------------------------------------
+
+# Main background, empty for terminal default, or hex for solid
+theme[main_bg]="#080b14"
+
+# Main text color
+theme[main_fg]="#d9e2f2"
+
+# Title color for boxes
+theme[title]="#74d7e8"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#a5eef5"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#1b2540"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#a5eef5"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#5e6b80"
+
+# Color of text appearing on top of graphs (uptime, network scaling)
+theme[graph_text]="#93a1b8"
+
+# Background color of the percentage meters
+theme[meter_bg]="#0d1220"
+
+# Misc colors for processes box (mini cpu graphs, details memory graph, status text)
+theme[proc_misc]="#5e6b80"
+
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#3e6fa8"
+theme[mem_box]="#1c3d6e"
+theme[net_box]="#3e6fa8"
+theme[proc_box]="#74d7e8"
+
+# Box divider line and small boxes line color
+theme[div_line]="#141b2d"
+
+# Temperature graph color (Emerald Success -> Amber Warning -> Critical Red)
+theme[temp_start]="#6fbf9c"
+theme[temp_mid]="#d6a85e"
+theme[temp_end]="#d16969"
+
+# CPU graph colors (Mission Blue -> Ice Cyan -> Bright Cyan)
+theme[cpu_start]="#3e6fa8"
+theme[cpu_mid]="#74d7e8"
+theme[cpu_end]="#a5eef5"
+
+# Mem/Disk free meter (Deep Space Blue -> Mission Blue -> Ice Cyan)
+theme[free_start]="#1c3d6e"
+theme[free_mid]="#3e6fa8"
+theme[free_end]="#74d7e8"
+
+# Mem/Disk cached meter (Cosmic Purple -> Soft Purple -> Ice Cyan)
+theme[cached_start]="#8876b8"
+theme[cached_mid]="#b1a3d1"
+theme[cached_end]="#74d7e8"
+
+# Mem/Disk available meter
+theme[available_start]="#3e6fa8"
+theme[available_mid]="#74d7e8"
+theme[available_end]="#a5eef5"
+
+# Mem/Disk used meter (Emerald -> Amber -> Critical Red)
+theme[used_start]="#6fbf9c"
+theme[used_mid]="#d6a85e"
+theme[used_end]="#d16969"
+
+# Download graph colors (Deep Space Blue -> Mission Blue -> Ice Cyan)
+theme[download_start]="#1c3d6e"
+theme[download_mid]="#3e6fa8"
+theme[download_end]="#74d7e8"
+
+# Upload graph colors (Cosmic Purple -> Soft Purple -> Bright Cyan)
+theme[upload_start]="#8876b8"
+theme[upload_mid]="#b1a3d1"
+theme[upload_end]="#a5eef5"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#3e6fa8"
+theme[process_mid]="#74d7e8"
+theme[process_end]="#a5eef5"
+
+# Graph gradient colors (shades from background to bright foreground)
+theme[gradient_color_0]="#080b14"
+theme[gradient_color_1]="#0d1220"
+theme[gradient_color_2]="#1b2540"
+theme[gradient_color_3]="#5e6b80"
+theme[gradient_color_4]="#3e6fa8"
+theme[gradient_color_5]="#74d7e8"
+theme[gradient_color_6]="#a5eef5"
+theme[gradient_color_7]="#f0f4fc"
