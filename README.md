@@ -17,9 +17,13 @@
 
 [![Omarchy 4.x](https://img.shields.io/badge/Omarchy-4.x-74d7e8?style=flat-square)](https://omarchy.org)
 [![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-3e6fa8?style=flat-square)](https://hyprland.org)
-[![Contrast WCAG AAA](https://img.shields.io/badge/Contrast-15.08:1%20AAA-6fbf9c?style=flat-square)](#color-philosophy)
-[![Wallpapers](https://img.shields.io/badge/Wallpapers-16%20Curated%201440p-8876b8?style=flat-square)](#curated-wallpaper-collection)
+[![Contrast WCAG AAA](https://img.shields.io/badge/Contrast-15.08:1%20AAA-6fbf9c?style=flat-square)](#-color-architecture)
+[![Wallpapers](https://img.shields.io/badge/Wallpapers-16%20Curated%201440p-8876b8?style=flat-square)](#-curated-wallpaper-collection)
 [![License: MIT](https://img.shields.io/badge/License-MIT-d6a85e?style=flat-square)](LICENSE)
+
+<br/>
+
+<img src="preview.png" alt="AEGIS Theme Preview" width="100%" style="border-radius: 8px;" />
 
 </div>
 
@@ -27,162 +31,209 @@
 
 ## 🛰️ Overview
 
-**AEGIS** transforms your Omarchy Linux installation into an advanced deep-space command console. Designed for systems programmers, cybersecurity researchers, and infrastructure engineers working in focused environments, AEGIS prioritizes:
+**AEGIS** transforms the Omarchy Linux desktop into an advanced deep-space command console. Conceptualized for systems programmers, cybersecurity engineers, and operators who require a quiet, technical, and distraction-free environment, AEGIS captures the atmosphere of working aboard an advanced orbital or deep-space observation workstation.
 
-- **Calm Focus:** Eliminates aggressive neon glare, visual clutter, and unnecessary animations.
-- **Technical Authenticity:** Grounded in spacecraft telemetry, orbital mechanics, and scientific observation.
-- **Maximum Ergonomics:** WCAG AAA 15.08:1 text contrast with carefully delineated semantic color roles.
-- **Seamless Omarchy Integration:** 100% native schema support for Omarchy 4.x dynamic configuration and template engine.
+### Core Design Principles
+
+- **Calm & Focused:** Replaces loud neon glow with deep space darks and controlled telemetry accents to reduce ocular fatigue during long sessions.
+- **Precise Semantics:** Every hue carries distinct functional meaning—cyan for active telemetry, mission blue for structure and navigation, amber for elevated metrics, restrained red for critical alerts, and emerald for healthy states.
+- **Believable Technical Aesthetic:** Clean geometry, orbital coordinates, and authentic NASA imagery rather than pseudo-hacker decorations.
+- **High Readability:** Validated at **15.08:1 contrast** (exceeding WCAG AAA standards) across editors, terminals, and diagnostic monitors.
+- **Native Omarchy 4.x Integration:** Uses Omarchy's native `colors.toml` schema and template compilation for automatic hot-reloading across apps.
 
 ---
 
 ## 🎨 Color Architecture
 
-The AEGIS palette balances deep-space isolation with crisp, high-visibility telemetry accents:
+The AEGIS palette provides clear visual hierarchy and distinct semantic roles:
 
-| Token | Hex | Role | Semantic Meaning |
+| Token | Hex | Semantic Role | Usage Across Environment |
 |---|---|---|---|
-| `dark_background` | `#05070D` | Absolute Base | Deep space void canvas |
-| `background` | `#080B14` | Primary Surface | Terminal and editor workstation canvas |
-| `lighter_background` | `#0D1220` | Secondary Surface | Inactive panels, dividers, and meters |
-| `selection` | `#1B2540` | Active Surface | Selected processes, visual selections, highlights |
-| `foreground` | `#D9E2F2` | Primary Text | Clean cool-white text (15.08:1 contrast) |
+| `dark_background` | `#05070D` | Absolute Base | Deep space void canvas, root surface |
+| `background` | `#080B14` | Primary Surface | Terminal and Neovim editor canvas |
+| `lighter_background` | `#0D1220` | Secondary Surface | Inactive panels, dividers, meter tracks |
+| `selection` | `#1B2540` | Active Surface | Visual selections, btop highlighted processes |
+| `foreground` | `#D9E2F2` | Primary Text | Crisp cool-white text (15.08:1 contrast) |
 | `light_foreground` | `#93A1B8` | Secondary Text | Metadata, status line items, secondary labels |
-| `muted` | `#5E6B80` | Muted Text | Syntax comments, disabled UI states, line numbers |
-| `accent` | `#74D7E8` | Primary Accent | Active selections, telemetry reticles, focus |
-| `cursor` | `#A5EEF5` | Bright Accent | Primary cursor, active line numbers |
-| `blue` | `#3E6FA8` | Mission Blue | Structural functions, navigation, CPU telemetry |
-| `purple` | `#8876B8` | Cosmic Purple | Types, keywords, secondary network graphs |
-| `green` | `#6FBF9C` | Emerald | Success states, healthy memory, verified status |
-| `yellow` | `#D6A85E` | Amber | Elevated metrics, warnings, attention states |
-| `red` | `#D16969` | Restrained Red | Critical telemetry alerts, errors, failures |
+| `muted` | `#5E6B80` | Muted Text | Syntax comments, line numbers, subtle guidelines |
+| `accent` | `#74D7E8` | Primary Accent (Ice Cyan) | Active window border, telemetry reticles, focus |
+| `cursor` | `#A5EEF5` | Bright Accent | Terminal cursor, active line numbers |
+| `blue` | `#3E6FA8` | Mission Blue | Structural syntax, functions, border gradient |
+| `purple` | `#8876B8` | Cosmic Purple | Types, keywords, network upload metrics |
+| `green` | `#6FBF9C` | Emerald Success | Verified states, healthy telemetry, git additions |
+| `yellow` | `#D6A85E` | Amber Warning | Attention indicators, search matches, elevated load |
+| `red` | `#D16969` | Restrained Red | Critical alerts, compiler errors, destructive states |
+
+### Hyprland Window Borders
+- **Active Window:** `rgba(74d7e8ee) rgba(3e6fa8ee) 45deg` (Ice cyan to mission blue dual gradient)
+- **Inactive Window:** `rgba(141b2daa)` (Muted graphite blue)
 
 ---
 
-## 🌌 Curated Wallpaper Collection (16 Total)
+## 🌌 Curated Wallpaper Collection
 
-AEGIS ships with **exactly 16 high-resolution (2560×1440 16:9)** wallpapers. The collection pairs authentic scientific imagery from NASA/ESA deep space missions with bespoke vector telemetry artwork:
+AEGIS includes **16 calibrated wallpapers** rendered at **2560×1440 (16:9)**. The collection pairs authentic scientific imagery from NASA/ESA deep space missions with bespoke vector telemetry artwork:
 
-| # | Filename | Description | Provenance |
-|---|---|---|---|
-| **01** | `01-command-center.png` | **Primary AEGIS Wallpaper** — Deep space command horizon with telemetry vectors | Original Bespoke Art |
-| **02** | `02-earth-from-orbit.jpg` | Apollo 17 "Blue Marble" orbital Hasselblad scan | NASA (`as17-148-22727`) |
-| **03** | `03-deep-space.jpg` | Hubble Ultra Deep Field (Thousands of ancient galaxies) | NASA / ESA (`PIA12110`) |
-| **04** | `04-carina-nebula.jpg` | JWST NIRCam Cosmic Cliffs in Carina Nebula | NASA / ESA / STScI |
-| **05** | `05-lunar-surface.jpg` | Apollo 11 lunar regolith with stark crater shadows | NASA (`as11-40-5875`) |
-| **06** | `06-orbital-station.jpg` | ISS Cupola observation windows overlooking the void | NASA (`iss042e078481`) |
-| **07** | `07-satellite-telemetry.jpg` | GRACE twin satellites measuring gravitational telemetry | NASA / JPL (`PIA04921`) |
-| **08** | `08-earth-at-night.jpg` | Nile River basin & Mediterranean night city lights from ISS | NASA Earth Observatory |
-| **09** | `09-starfield-minimal.png` | Sparse, tranquil micro-starfield on deep void canvas | Original Bespoke Art |
-| **10** | `10-cosmic-horizon.jpg` | Cassini wide-angle view of Saturn's limb & ring shadows | NASA / JPL (`PIA08351`) |
-| **11** | `11-scientific-observation.jpg` | James Webb Space Telescope gold primary mirror array | NASA / GSFC (`PIA11195`) |
-| **12** | `12-cosmic-blue-abstract.png` | Orbital trajectory ellipses & gravitational vector fields | Original Bespoke Art |
-| **13** | `13-the-void.png` | Ultra-dark isolation canvas with microscopic cosmic dust | Original Bespoke Art |
-| **14** | `14-nebula-purple.jpg` | Bubble Nebula NGC 7635 in deep infrared wavelengths | NASA / JPL-Caltech / WISE |
-| **15** | `15-deep-space-exploration.jpg` | Voyager spacecraft traversing interstellar space | NASA / JPL (`PIA14111`) |
-| **16** | `16-aegis-signature.png` | Signature orbital telemetry platform overlooking celestial limb | Original Bespoke Art |
+| # | Filename | Name | Provenance & Description |
+|:---:|---|---|---|
+| **01** | `01-command-center.png` | **The Command Center** | *Primary Wallpaper.* Atmospheric planetary curve with telemetry vectors and deep negative space. |
+| **02** | `02-earth-from-orbit.jpg` | **Earth from Orbit** | Apollo 17 "Blue Marble" Hasselblad scan (NASA `as17-148-22727`). |
+| **03** | `03-deep-space.jpg` | **Deep Space** | Hubble Ultra Deep Field (NASA/ESA `PIA12110`) revealing thousands of primordial galaxies. |
+| **04** | `04-carina-nebula.jpg` | **Carina Nebula** | James Webb Space Telescope NIRCam image of the "Cosmic Cliffs" in NGC 3324. |
+| **05** | `05-lunar-surface.jpg` | **Lunar Surface** | Apollo 11 lunar regolith with dramatic crater shadows (NASA `as11-40-5875`). |
+| **06** | `06-orbital-station.jpg` | **Orbital Station** | ISS Cupola observation module overlooking the void (NASA `iss042e078481`). |
+| **07** | `07-satellite-telemetry.jpg` | **Satellite Telemetry** | GRACE twin satellites measuring gravitational telemetry in polar orbit (NASA/JPL). |
+| **08** | `08-earth-at-night.jpg` | **Earth at Night** | Nile River basin & Mediterranean city lights from orbit (NASA Earth Observatory). |
+| **09** | `09-starfield-minimal.png` | **Starfield Minimal** | Sparse, calm stellar distribution on `#05070D` void canvas for distraction-free coding. |
+| **10** | `10-cosmic-horizon.jpg` | **Cosmic Horizon** | Cassini wide-angle view of Saturn's limb and ring shadows (NASA/JPL `PIA08351`). |
+| **11** | `11-scientific-observation.jpg` | **Scientific Observation** | James Webb Space Telescope beryllium-gold primary mirror array (NASA/GSFC). |
+| **12** | `12-cosmic-blue-abstract.png` | **Cosmic Blue Abstract** | Geometric orbital trajectory paths and gravitational resonance fields. |
+| **13** | `13-the-void.png` | **The Void** | Maximum negative space isolation canvas with faint cosmic micro-dust. |
+| **14** | `14-nebula-purple.jpg` | **Nebula Purple** | Bubble Nebula NGC 7635 captured in deep infrared wavelengths (NASA/JPL/WISE). |
+| **15** | `15-deep-space-exploration.jpg` | **Deep Space Exploration** | Voyager spacecraft traversing the interstellar medium beyond the heliosphere. |
+| **16** | `16-aegis-signature.png` | **AEGIS Signature** | Orbital telemetry platform observing Earth's limb, with precision navigation reticles. |
 
-*Complete license details and original asset URLs are documented in [SOURCES.md](SOURCES.md).*
+*Full license details and NASA asset URLs are documented in [SOURCES.md](SOURCES.md).*
 
 ---
 
-## 🛠️ Themed Applications & Components
+## 🛠️ Themed Applications & Environments
+
+AEGIS coordinates across the entire Omarchy workspace:
 
 - **Desktop Shell (Quickshell):** Top status bar, workspace indicators, application launcher, notifications, popups, and lock screen.
-- **Window Management (Hyprland):** Dual-color gradient active border (`rgba(74d7e8ee) rgba(3e6fa8ee) 45deg`) and dark graphite inactive border (`rgba(141b2daa)`).
-- **Terminals (Foot & Alacritty):** Deep-space background, ANSI 16-color palette, high-visibility cursor, and distinct selection.
-- **Editor (Neovim):** Syntax highlighting, LSP diagnostics, statusline, and buffer tabs via `aether.nvim` and LazyVim hot-reloading.
-- **System Telemetry (btop):** Spacecraft telemetry dashboard with dedicated gradients for CPU, Memory, Disk, and Network monitoring.
-- **Shell Prompt (Zsh & Starship):** Ice cyan active symbols and muted directory pathing.
-- **Browsers & Icons:** Chromium / Chrome theme color policy (`#080B14`) and `Yaru-blue-dark` icon theme.
+- **Window Management (Hyprland):** Dual-tone ice cyan & mission blue active borders, graphite inactive borders.
+- **Terminals (Foot & Alacritty):** Deep-space background, full ANSI 16-color table, visible cursor, and distinct selection.
+- **Editor (Neovim):** Automatically loaded and hot-reloaded via `aether.nvim` and LazyVim, with syntax highlighting for C, C++, Rust, Python, Assembly, Lua, Web, and LSP diagnostics.
+- **System Telemetry (btop):** Dedicated telemetry dashboard styling CPU, Memory, Disk, and Network monitoring graphs.
+- **Shell (Zsh & Starship):** Ice cyan prompt characters, muted pathing, and responsive git status.
+- **Browsers & Icons:** Dark browser policy (`#080B14`) and `Yaru-blue-dark` icon theme.
 
 ---
 
-## 🚀 Installation & Activation
+## 📥 Installation
 
-### 1. Linking into Omarchy
+Choose any of the following methods to install AEGIS on your system:
 
-To make AEGIS accessible to the Omarchy theme manager, create a symlink in your user themes directory:
+### Method 1: Using the Omarchy Theme Manager (Recommended)
+
+Run the official Omarchy theme installer with the repository URL:
 
 ```bash
-mkdir -p ~/.config/omarchy/themes
-ln -s /home/coder/themes/AEGIS ~/.config/omarchy/themes/aegis
+omarchy theme install https://github.com/<username>/omarchy-aegis-theme.git
 ```
 
-### 2. Activating AEGIS
+This automatically clones the theme into your user themes directory, compiles the required templates, and applies the theme immediately.
 
-Switch to AEGIS instantly using the Omarchy CLI:
+### Method 2: Manual Git Clone
+
+Clone the repository directly into your Omarchy themes directory:
+
+```bash
+git clone https://github.com/<username>/omarchy-aegis-theme.git ~/.config/omarchy/themes/aegis
+```
+
+Then apply the theme:
 
 ```bash
 omarchy theme set aegis
 ```
 
-Alternatively, open the graphical theme switcher:
+### Method 3: Local Repository Symlink (For Local Clones)
+
+If you have cloned the repository to a local directory (e.g., `~/projects/omarchy-aegis-theme`):
 
 ```bash
+mkdir -p ~/.config/omarchy/themes
+ln -s ~/projects/omarchy-aegis-theme ~/.config/omarchy/themes/aegis
+omarchy theme set aegis
+```
+
+---
+
+## 🚀 Usage & Commands
+
+Once installed, AEGIS can be managed using standard Omarchy commands:
+
+### Activating the Theme
+```bash
+# Via CLI:
+omarchy theme set aegis
+
+# Or via the interactive visual picker:
 omarchy theme switcher
 ```
-And select **Aegis** from the carousel.
 
-### 3. Cycling Wallpapers
-
-To cycle through the 16 wallpapers in order:
-
+### Cycling & Selecting Wallpapers
 ```bash
+# Cycle to the next wallpaper in the collection:
 omarchy theme bg next
-```
 
-Or open the interactive background switcher:
-
-```bash
+# Or open the interactive wallpaper gallery:
 omarchy background
 ```
 
----
-
-## 🔄 Rollback & Removal
-
-AEGIS is completely modular and non-destructive.
-
-### To switch back to your previous theme:
-
+### Verifying Color Contrast
+Inspect the palette and contrast ratios in your terminal:
 ```bash
-omarchy theme set "Mr Robot"
-# Or any other installed theme:
-# omarchy theme set "Tokyo Night"
-# omarchy theme set "Nord"
-# omarchy theme set "Catppuccin"
-```
-
-### To completely remove AEGIS:
-
-```bash
-# 1. Switch away from AEGIS first
-omarchy theme set "Catppuccin"
-
-# 2. Remove the symlink
-rm -f ~/.config/omarchy/themes/aegis
+omarchy-dev-theme-preview aegis
 ```
 
 ---
 
-## 📦 Publishing to Git
+## ⚙️ Customization
 
-To publish this theme to GitHub or GitLab:
+AEGIS is built entirely on standard TOML configuration. To adjust any colors or border values to your liking:
 
-```bash
-cd /home/coder/themes/AEGIS
-git init
-git add .
-git commit -m "feat: initial release of AEGIS — Deep Space Command Center theme v1.0.0"
-git branch -M main
-git remote add origin https://github.com/<your-username>/omarchy-aegis-theme.git
-git push -u origin main
-```
+1. Open `~/.config/omarchy/themes/aegis/colors.toml` in your editor:
+   ```bash
+   nvim ~/.config/omarchy/themes/aegis/colors.toml
+   ```
+2. Modify any hex code (for example, tweak `accent`, `selection`, or ANSI colors).
+3. Reapply the theme to instantly propagate changes across all applications:
+   ```bash
+   omarchy theme set aegis
+   ```
 
 ---
 
-## 📄 License
+## 🔄 Rollback & Uninstallation
 
-- Theme configuration and original artwork: [MIT License](LICENSE)
-- NASA photography and scientific assets: Public Domain (U.S. Government Work)
+AEGIS does not modify system files and can be reverted or uninstalled cleanly at any time:
+
+### Switching to Another Theme
+To switch back to any bundled or installed theme:
+```bash
+omarchy theme set "Tokyo Night"
+# Or: omarchy theme set "Catppuccin", "Nord", "Gruvbox", etc.
+```
+
+### Removing AEGIS
+1. Switch away from AEGIS first:
+   ```bash
+   omarchy theme set "Catppuccin"
+   ```
+2. Remove the theme using Omarchy or delete the directory:
+   ```bash
+   omarchy theme remove aegis
+   # Or manually:
+   # rm -rf ~/.config/omarchy/themes/aegis
+   ```
+
+---
+
+## 📋 System Requirements
+
+- **Operating System:** Omarchy Linux 4.x / Arch Linux
+- **Compositor:** Hyprland (Wayland)
+- **Shell / UI:** Quickshell
+- **Terminal:** Foot or Alacritty
+- **Editor:** Neovim (LazyVim / `aether.nvim`)
+- **System Monitor:** btop
+
+---
+
+## 📄 License & Attribution
+
+- **Theme Configuration & Bespoke Artworks:** Released under the [MIT License](LICENSE).
+- **Space Photography:** Public Domain works of the U.S. Federal Government created by NASA, ESA, CSA, and STScI. See [SOURCES.md](SOURCES.md) for individual image IDs, missions, and attribution links.
